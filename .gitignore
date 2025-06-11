@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+.DS_Store
+.vscode/
+
+/skillvault/node_modules/
+/skillvault/dist/
+/skillvault/.env
+/skillvault/.DS_Store
+/skillvault/.vscode/
