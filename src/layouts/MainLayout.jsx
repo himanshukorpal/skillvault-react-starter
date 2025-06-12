@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
-import Navbar from "./components/Navbar";
-const App = () => {
+import Navbar from "../components/Navbar";
+const MainLayout = () => {
   return (
     <div className="min-h-screen p-6">
       <Navbar />
@@ -11,4 +11,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default MainLayout;

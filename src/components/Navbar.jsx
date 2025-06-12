@@ -1,22 +1,16 @@
-import { Link, NavLink } from "react-router";
+import { Link } from "react-router";
 
 const Navbar = () => {
-  const navLinkClass = ({ isActive }) => {
-    isActive ? "text-yellow-600 font-bold" : "text-gray-700";
-  };
-
   return (
-    <nav className="bg-white shadow p-4 flex justify-between items-center">
-      <Link to="/" className="text-2xl font-bold">
+    <nav className="bg-gray-700 shadow p-4 flex justify-between items-center">
+      <Link to="/" className="text-2xl font-bold text-white">
         SkillVault
       </Link>
-      <div className="space-x-4">
-        <NavLink to="/" className={navLinkClass}>
-          Home
-        </NavLink>
-        <NavLink to="/tracker" className={navLinkClass}>
-          Tracker
-        </NavLink>
+      <div className="space-x-4 text-white">
+        <Link to="/">Home</Link>
+        <Link to="/tracker">Tracker</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/signup">Signup</Link>
       </div>
     </nav>
   );
