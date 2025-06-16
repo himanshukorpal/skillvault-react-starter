@@ -8,6 +8,7 @@ const Sidebar = () => {
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/dashboard/skills">Skills</Link>
         <Link to="/dashboard/goals">Goals</Link>
+        <Link to="/dashboard/tracker">Tracker</Link>
         <Link to="/dashboard/settings">Settings</Link>
       </nav>
     </div>

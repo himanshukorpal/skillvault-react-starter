@@ -21,6 +21,7 @@ const router = createBrowserRouter([
       { path: "skills", element: <Skills /> },
       { path: "goals", element: <Goals /> },
       { path: "settings", element: <Settings /> },
+      { path: "tracker", element: <Tracker /> },
     ],
   },
 
