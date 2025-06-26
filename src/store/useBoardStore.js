@@ -7,11 +7,14 @@ const useBoardStore = create((set) => ({
     learning: [],
     learned: [],
   },
-  addSkill: (column, title, tags = []) => {
+  addSkill: (column, title, tags = [], level) => {
     set((state) => ({
       columns: {
         ...state.columns,
-        [column]: [...state.columns[column], { id: uuidv4(), title, tags }],
+        [column]: [
+          ...state.columns[column],
+          { id: uuidv4(), title, tags, level },
+        ],
       },
     }));
   },
@@ -29,6 +32,24 @@ const useBoardStore = create((set) => ({
         },
       };
     });
+  },
+  deleteSkill: (column, id) => {
+    set((state) => ({
+      columns: {
+        ...state.columns,
+        [column]: state.columns[column].filter((s) => s.id !== id),
+      },
+    }));
+  },
+  editSkill: (column, id, updatedSkill) => {
+    set((state) => ({
+      columns: {
+        ...state.columns,
+        [column]: state.columns[column].map((skill) =>
+          skill.id === id ? { ...skill, ...updatedSkill } : skill
+        ),
+      },
+    }));
   },
 }));
 
