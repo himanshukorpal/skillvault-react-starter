@@ -26,7 +26,7 @@ const SkillCard = () => {
         Frontend
       </span>
 
-      <p className="mb-3 text-gray-700 text-sm">Component based framework.</p>
+      <p className="mb-3 text-gray-700 text-sm">Component based framework</p>
     </article>
   );
 };
